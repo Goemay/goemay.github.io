@@ -349,31 +349,37 @@ section {
   }
 }
 
-.waving-line {
-  position: relative;
-}
+/* PROFILE SECTION */
 
-.waving-line::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px; /* Adjust the height of the wave as needed */
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='150%' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 40 C30 70 70 0 100 40 L100 100 L0 100 Z' fill='%23007bff' /></svg>");
-  background-size: 200% 100%;
-  animation: wave-animation 2s linear infinite;
-}
-
-@keyframes wave-animation {
+/* Define the animation */
+@keyframes brightnessAnimation {
   0% {
-    background-position: 100% 0;
+    filter: brightness(0.25); /* 25% brightness */
+  }
+  25% {
+    filter: brightness(0.5); /* 50% brightness */
+  }
+  50% {
+    filter: brightness(0.75); /* 75% brightness */
+  }
+  75% {
+    filter: brightness(1); /* 100% brightness */
   }
   100% {
-    background-position: -100% 0;
+    filter: brightness(0.25); /* Back to 25% brightness */
   }
 }
 
+.vertical-line {
+  display: flex;
+  border-right: 5px solid #333;
+  height: 30%;
+  margin: 30vh -6.1rem ;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  animation: brightnessAnimation 4s linear infinite; /* Apply the animation */
+}
+
+/* Rest of your CSS styles for other elements in the profile section */
 
 
 /* For desktop screens */
@@ -381,8 +387,8 @@ section {
   display: flex;
   height: 400px;
   width: 400px;
+  margin: auto 0;
   border-radius: 50%;
-  margin-right: 20vh;
 }
 
 .section__text {
@@ -395,7 +401,6 @@ section {
 }
 
 .section__text__menu__tille{
-  height: 59px;
   font-size: 3rem;
   text-align: right;
   @media (max-width: 768px ) {
