@@ -79,26 +79,6 @@ body {
   background-color: white; /* Set the primary background color to white */
 }
 
-.gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #ffffff, #f0f0f0); /* Set your desired gradient colors (white to light grey) */
-  background-size: 200% 200%;
-  animation: gradientAnimation 10s linear infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-
-
-
 /* Add an animation for the background */
 body::before {
   content: "";
@@ -110,6 +90,15 @@ body::before {
   background: linear-gradient(45deg, #ffffff, #f0f0f0, #ffffff);
   z-index: -1;
   animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
 }
 
 
