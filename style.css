@@ -365,6 +365,11 @@ section {
   display: flex;
 }
 
+.profile{
+background-color: white;
+border-radius: 10%;
+height: 86vh;
+}
 /* PROFILE SECTION */
 
 #profile {
@@ -487,6 +492,7 @@ section {
 /* BUTTONS */
 
 .btn-container {
+  padding: 1%;
   display: flex;
   justify-content: center;
   gap: 1rem;
